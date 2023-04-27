@@ -782,7 +782,7 @@ public abstract class DhcpPacket {
     private static String getVendorId(@Nullable List<DhcpOption> customizedClientOptions) {
         if (sTestOverrideVendorId != null) return sTestOverrideVendorId;
 
-        String vendorId = "android-dhcp-" + Build.VERSION.RELEASE;
+        String vendorId = "android-dhcp-" + Build.VERSION_CODES.S;
         if (customizedClientOptions != null) {
             for (DhcpOption option : customizedClientOptions) {
                 if (option.type == DHCP_VENDOR_CLASS_ID) {
